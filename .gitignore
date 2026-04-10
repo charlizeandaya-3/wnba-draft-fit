@@ -1,0 +1,6 @@
+wnba-env/
+__pycache__/
+.DS_Store
+data/raw/
+*.csv
+*.ipynb_checkpoints
