@@ -48,6 +48,20 @@ Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using we
 | Angela Dugalic | Washington Mystics | 9 | 0.300 |
 | Cotie McMahon | Washington Mystics | 11 | 0.288 |
 
+## Visualizations
+
+### Predicted Rookie Impact Scores
+![Predicted RIS](visuals/predicted_ris_bar.png)
+
+### Draft Position vs Predicted Impact
+![Draft Position vs RIS](visuals/draft_position_vs_ris.png)
+
+### What NCAA Stats Best Predict WNBA Rookie Success?
+![Feature Importance](visuals/feature_importance.png)
+
+### Historical RIS Distribution vs 2026 Predictions
+![RIS Distribution](visuals/ris_distribution.png)
+
 ## Project Structure
 
 ```
