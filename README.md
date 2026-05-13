@@ -62,6 +62,23 @@ Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using we
 ### Historical RIS Distribution vs 2026 Predictions
 ![RIS Distribution](visuals/ris_distribution.png)
 
+## Key Insights
+
+**Scoring and draft position are the strongest predictors of rookie success.**
+College points per game and draft pick number are nearly equally predictive of WNBA rookie impact, suggesting scouts are doing their job but raw scoring still adds signal on top of draft position alone.
+
+**Games played in college matters more than shooting efficiency.**
+Availability and durability (games played) ranks third in feature importance — players who stayed healthy and played consistently in college tend to translate better to the pros. Three-point percentage and turnovers are nearly irrelevant predictors.
+
+**Madina Okot is the most undervalued pick in the 2026 draft.**
+Selected 13th overall by Atlanta, her dominant rebounding profile (10.3 RPG in college) projects her as the second-highest impact rookie in the class — suggesting Atlanta got exceptional value late in the first round.
+
+**Azzi Fudd may be the most overvalued pick.**
+Despite going #1 overall to Dallas, her predicted RIS ranks 7th in the class. Her injury-shortened junior year likely suppresses her weighted career averages, so this may underestimate her true ceiling — but based purely on college production relative to draft position, she projects below expectations.
+
+**Washington Mystics had a split draft.**
+With three first-round picks, Washington's haul was uneven — Lauren Betts projects as the top rookie in the entire class, but Angela Dugalic and Cotie McMahon both project near the bottom.
+
 ## Project Structure
 
 ```
