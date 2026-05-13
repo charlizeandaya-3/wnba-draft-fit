@@ -73,8 +73,10 @@ Python, pandas, scikit-learn, matplotlib, seaborn, Jupyter, GitHub
 
 ## Limitations
 - Small training set (86 players) limits model power
-- International players excluded due to lack of NCAA data
-- Toronto Tempo team context approximated using 2025 league average (expansion team)
+- Only NCAA players included — international prospects (Awa Fam, Nell Angloma, etc.) excluded due to lack of comparable college stats
+- Only Round 1 picks analyzed — model focuses on high-stakes picks where team fit matters most
+- Players with significant injury history may be undervalued — for example, Azzi Fudd missed most of her junior year with a knee injury, so her weighted career averages don't fully reflect her ceiling
+- Toronto Tempo team context approximated using 2025 league average (first-year expansion team with no prior stats)
 - Early season validation data is limited — predictions will be updated throughout the 2026 season
 
 ## Status
