@@ -50,6 +50,7 @@ Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using we
 
 ## Project Structure
 
+```
 wnba-draft-fit/
 ├── data/
 │   ├── external/        # Raw CSVs from Sports/Basketball Reference
@@ -65,6 +66,7 @@ wnba-draft-fit/
 │   ├── features.py
 │   └── model.py
 └── README.md
+```
 
 ## Tools
 Python, pandas, scikit-learn, matplotlib, seaborn, Jupyter, GitHub
