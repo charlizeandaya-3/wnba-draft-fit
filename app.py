@@ -86,8 +86,7 @@ st.markdown("---")
 # Visualization section
 st.header("Visualizations")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Predicted RIS", "Draft Position vs Impact", "Feature Importance", "RIS Distribution"])
-
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Predicted RIS", "Draft Position vs Impact", "Feature Importance", "RIS Distribution", "Historical Accuracy"])
 with tab1:
     st.image("visuals/predicted_ris_bar.png", use_container_width=True)
 
@@ -99,6 +98,42 @@ with tab3:
 
 with tab4:
     st.image("visuals/ris_distribution.png", use_container_width=True)
+
+with tab5:
+    st.image("visuals/backtest_accuracy.png", use_container_width=True)
+    
+    # Load backtest results
+    backtest = pd.read_csv("data/processed/backtest_results.csv")
+    
+    st.subheader("Backtest Metrics (2023-2025 Classes)")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("R²", "0.276")
+    with col2:
+        st.metric("RMSE", "0.154")
+    with col3:
+        st.metric("Players Tested", "34")
+    
+    st.subheader("Biggest Hits & Misses")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("**✅ Best Predictions**")
+        best = backtest.nsmallest(5, 'abs_error')[['player', 'draft_year', 'RIS', 'predicted_RIS', 'abs_error']]
+        best.columns = ['Player', 'Year', 'Actual RIS', 'Predicted RIS', 'Error']
+        best = best.reset_index(drop=True)
+        best.index += 1
+        st.dataframe(best, use_container_width=True)
+    
+    with col2:
+        st.markdown("**❌ Biggest Misses**")
+        worst = backtest.nlargest(5, 'abs_error')[['player', 'draft_year', 'RIS', 'predicted_RIS', 'abs_error']]
+        worst.columns = ['Player', 'Year', 'Actual RIS', 'Predicted RIS', 'Error']
+        worst = worst.reset_index(drop=True)
+        worst.index += 1
+        st.dataframe(worst, use_container_width=True)
+    
+    st.caption("Model trained on 2019-2022 classes, tested on 2023-2025 classes")
 
 st.markdown("---")
 
