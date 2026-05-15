@@ -1,0 +1,97 @@
+draft_pick,wnba_team,player,college,wnba_years,wnba_games,wnba_mpg,wnba_ppg,wnba_rpg,wnba_apg,wnba_ws,wnba_ws40,draft_year
+1,Las Vegas Aces,Jackie Young,Notre Dame,7,243.0,30.0,14.0,4.1,4.2,31.0,0.17,2019
+2,New York Liberty,AD Durr,Louisville,3,79.0,15.7,6.6,1.2,1.1,0.9,0.027,2019
+3,Indiana Fever,Teaira McCowan,Mississippi State,7,207.0,22.6,10.7,8.1,1.0,17.7,0.152,2019
+4,Chicago Sky,Katie Lou Samuelson,UConn,5,138.0,20.1,5.9,2.5,1.4,3.5,0.05,2019
+5,Dallas Wings,Arike Ogunbowale,Notre Dame,7,224.0,34.2,19.9,3.2,4.0,18.7,0.097,2019
+6,Minnesota Lynx,Napheesa Collier,UConn,7,193.0,33.5,18.4,7.8,3.0,33.6,0.208,2019
+7,Los Angeles Sparks,Kalani Brown,Baylor,6,139.0,13.3,5.7,3.5,0.8,6.1,0.132,2019
+8,Phoenix Mercury,Alanna Smith,Stanford,7,183.0,20.9,7.3,4.6,1.9,13.1,0.137,2019
+9,Connecticut Sun,Kristine Anigwe,California,5,77.0,9.6,2.8,2.3,0.3,0.7,0.041,2019
+10,Washington Mystics,Kiara Leslie,NC State,2,28.0,17.9,4.6,2.8,0.8,0.1,0.007,2019
+11,Atlanta Dream,Brianna Turner,Notre Dame,7,212.0,22.5,4.1,5.7,1.3,11.6,0.097,2019
+12,Seattle Storm,Ezi Magbegor,,6,206.0,25.3,9.7,6.0,1.7,20.7,0.159,2019
+13,Phoenix Mercury,Sophie Cunningham,Missouri,7,212.0,23.1,7.9,2.8,1.4,11.0,0.09,2019
+14,New York Liberty,Han Xu,,3,58.0,12.4,5.8,2.4,0.6,1.7,0.096,2019
+15,Chicago Sky,Chloe Jackson,Baylor,1,8.0,4.0,0.6,0.8,0.5,-0.2,-0.245,2019
+1,New York Liberty,Sabrina Ionescu,Oregon,6,181.0,31.4,16.7,5.5,5.9,20.7,0.146,2020
+2,Dallas Wings,Satou Sabally,Oregon,6,136.0,28.8,15.9,6.7,3.3,13.5,0.138,2020
+3,Indiana Fever,Lauren Cox,Baylor,3,41.0,11.9,2.9,3.0,0.8,0.6,0.053,2020
+4,Atlanta Dream,Chennedy Carter,Texas A&M,4,84.0,23.1,14.6,2.5,2.8,3.8,0.078,2020
+5,Dallas Wings,Bella Alarie,Princeton,2,53.0,13.5,2.6,3.1,0.5,1.4,0.076,2020
+6,Minnesota Lynx,Mikiah Herbert Harrigan,South Carolina,3,53.0,10.8,3.3,1.8,0.3,0.4,0.027,2020
+7,Dallas Wings,Tyasha Harris,South Carolina,6,172.0,19.5,6.5,1.3,2.6,6.3,0.075,2020
+8,Chicago Sky,Ruthy Hebard,Oregon,4,95.0,13.0,4.5,3.2,0.5,4.6,0.149,2020
+9,New York Liberty,Megan Walker,UConn,3,59.0,12.6,3.9,1.3,0.6,-1.2,-0.066,2020
+10,Phoenix Mercury,Jocelyn Willoughby,Virginia,3,62.0,11.2,3.1,1.5,0.6,0.3,0.015,2020
+11,Seattle Storm,Kitija Laksa,,1,33.0,19.0,5.9,1.2,0.6,0.6,0.04,2020
+12,New York Liberty,Jazmine Jones,Louisville,3,55.0,16.8,6.9,2.7,1.4,-0.3,-0.015,2020
+13,New York Liberty,Kylee Shook,Louisville,2,50.0,17.1,5.0,3.5,1.0,0.4,0.02,2020
+14,Indiana Fever,Kathleen Doyle,Iowa,1,18.0,8.6,1.5,0.8,1.1,-0.7,-0.189,2020
+15,New York Liberty,Leaonna Odom,Duke,2,40.0,16.8,4.4,1.8,0.6,1.1,0.063,2020
+1,Dallas Wings,Charli Collier,Texas,2,45.0,9.4,2.9,2.5,0.2,0.5,0.046,2021
+2,Dallas Wings,Awak Kuier,,3,86.0,11.1,2.6,2.5,0.7,1.0,0.041,2021
+3,Atlanta Dream,Aari McDonald,Arizona,5,136.0,22.3,8.8,2.0,3.1,5.0,0.066,2021
+4,Indiana Fever,Kysre Gondrezick,West Virginia,2,24.0,7.9,1.7,0.9,0.8,-0.6,-0.126,2021
+5,Dallas Wings,Chelsea Dungee,Arkansas,1,14.0,4.6,0.6,0.2,0.1,-0.3,-0.159,2021
+6,New York Liberty,Michaela Onyenwere,UCLA,5,182.0,19.1,6.9,2.4,0.9,0.0,-0.001,2021
+7,Los Angeles Sparks,Jasmine Walker,Alabama,2,34.0,8.9,1.5,1.4,0.2,-1.0,-0.134,2021
+8,Chicago Sky,Shyla Heal,,1,4.0,7.8,2.0,0.8,0.8,-0.3,-0.41,2021
+9,Minnesota Lynx,Rennia Davis,Tennessee,1,8.0,5.4,1.3,1.0,0.1,-0.1,-0.134,2021
+10,Los Angeles Sparks,Stephanie Watts,UNC,1,6.0,14.0,2.5,3.7,0.5,-0.1,-0.061,2021
+11,Seattle Storm,Aaliyah Wilson,Texas A&M,1,14.0,8.5,1.1,0.9,0.6,-0.5,-0.165,2021
+12,Las Vegas Aces,Iliana Rupert,,3,58.0,14.9,5.1,2.7,1.0,2.7,0.123,2021
+13,Dallas Wings,Dana Evans,Louisville,5,184.0,16.1,6.3,1.0,2.1,2.9,0.039,2021
+14,Las Vegas Aces,Destiny Slocum,Arkansas,2,24.0,7.3,1.5,1.0,0.7,0.1,0.018,2021
+1,Atlanta Dream,Rhyne Howard,Kentucky,4,136.0,33.2,17.1,4.6,3.5,14.5,0.128,2022
+2,Indiana Fever,NaLyssa Smith,Baylor,4,148.0,25.8,11.3,7.1,1.1,5.1,0.053,2022
+3,Washington Mystics,Shakira Austin,Ole Miss,4,105.0,22.2,10.7,6.6,1.2,5.2,0.09,2022
+4,Indiana Fever,Emily Engstler,Louisville,4,119.0,14.3,4.6,3.9,1.4,3.8,0.088,2022
+5,New York Liberty,Nyara Sabally,Oregon,3,76.0,12.1,3.9,3.3,0.5,3.5,0.154,2022
+6,Indiana Fever,Lexie Hull,Stanford,4,134.0,21.0,5.5,3.0,1.2,3.8,0.053,2022
+7,Dallas Wings,Veronica Burton,Northwestern,4,151.0,18.5,5.4,2.4,3.2,10.5,0.151,2022
+9,Los Angeles Sparks,Rae Burrell,Tennessee,4,97.0,15.1,5.6,1.8,1.0,1.8,0.05,2022
+10,Indiana Fever,Queen Egbo,Baylor,3,78.0,15.7,5.5,4.8,0.5,1.1,0.036,2022
+11,Las Vegas Aces,Kierstan Bell,Florida Gulf Coast,4,98.0,10.4,3.3,1.5,0.5,0.5,0.019,2022
+12,Connecticut Sun,Nia Clouden,Michigan State,2,33.0,9.2,2.0,0.8,0.9,0.1,0.02,2022
+13,Minnesota Lynx,Khayla Pointer,LSU,1,10.0,5.8,2.2,0.8,0.2,-0.1,-0.092,2022
+14,Washington Mystics,Christyn Williams,UConn,1,4.0,11.3,4.3,1.0,0.8,0.0,-0.004,2022
+15,Atlanta Dream,Naz Hillmon,Michigan,4,158.0,20.3,5.8,4.9,1.4,10.2,0.128,2022
+1,Indiana Fever,Aliyah Boston,South Carolina,3,124.0,30.7,14.5,8.5,3.0,17.7,0.185,2023
+2,Minnesota Lynx,Diamond Miller,Maryland,3,93.0,15.9,6.5,2.2,1.3,0.1,0.002,2023
+3,Dallas Wings,Maddy Siegrist,Villanova,3,92.0,18.1,7.9,2.8,0.6,4.3,0.104,2023
+4,Washington Mystics,Stephanie Soares,Iowa State,1,22.0,8.0,1.1,2.1,0.5,-0.3,-0.072,2023
+5,Dallas Wings,Lou Lopez Sénéchal,UConn,1,27.0,4.6,0.9,0.4,0.4,-0.3,-0.109,2023
+6,Atlanta Dream,Haley Jones,Stanford,3,108.0,17.5,4.7,2.6,2.2,-0.9,-0.02,2023
+7,Indiana Fever,Grace Berger,Indiana,3,66.0,15.8,3.7,2.0,2.0,0.0,0.001,2023
+8,Atlanta Dream,Laeticia Amihere,South Carolina,3,66.0,9.3,3.5,2.6,0.5,1.2,0.078,2023
+9,Seattle Storm,Jordan Horston,Tennessee,2,75.0,22.4,6.9,4.7,1.7,1.4,0.034,2023
+10,Los Angeles Sparks,Zia Cooke,South Carolina,3,94.0,11.4,4.0,0.7,0.7,-2.3,-0.086,2023
+11,Dallas Wings,Abby Meyers,Maryland,1,9.0,4.0,1.4,0.4,0.0,0.0,0.027,2023
+13,Indiana Fever,Taylor Mikesell,Ohio State,1,6.0,4.8,2.8,0.3,0.3,0.2,0.226,2023
+15,Atlanta Dream,Leigha Brown,Michigan,1,25.0,5.2,0.8,0.8,0.4,-0.1,-0.039,2023
+1,Indiana Fever,Caitlin Clark,Iowa,2,53.0,34.3,18.5,5.5,8.5,3.5,0.077,2024
+2,Los Angeles Sparks,Cameron Brink,Stanford,2,34.0,16.9,6.1,4.8,1.0,0.5,0.037,2024
+3,Chicago Sky,Kamilla Cardoso,South Carolina,2,72.0,27.5,11.9,8.3,2.1,5.4,0.108,2024
+4,Los Angeles Sparks,Rickea Jackson,Tennessee,2,78.0,29.8,14.0,3.6,1.6,1.4,0.024,2024
+5,Dallas Wings,Jacy Sheldon,Ohio State,2,70.0,23.4,6.3,2.0,2.2,0.1,0.003,2024
+6,Washington Mystics,Aaliyah Edwards,UConn,2,70.0,18.2,6.5,4.6,1.0,2.0,0.063,2024
+7,Chicago Sky,Angel Reese,LSU,2,64.0,32.0,14.1,12.9,2.7,4.6,0.09,2024
+8,Minnesota Lynx,Alissa Pili,Utah,2,41.0,5.8,2.3,1.1,0.2,0.2,0.031,2024
+9,Dallas Wings,Carla Leite,,1,37.0,17.2,7.2,1.3,2.0,0.8,0.051,2024
+10,Connecticut Sun,Leïla Lacan,,1,25.0,26.6,10.4,2.4,3.7,1.2,0.07,2024
+11,New York Liberty,Marquesha Davis,Ole Miss,2,31.0,4.3,1.1,0.5,0.2,0.0,-0.01,2024
+14,Seattle Storm,Nika Mühl,UConn,1,16.0,3.6,0.1,0.6,0.4,-0.2,-0.162,2024
+15,Indiana Fever,Celeste Taylor,Ohio State,1,22.0,14.9,2.6,1.3,1.3,-0.4,-0.049,2024
+1,Dallas Wings,Paige Bueckers,UConn,1,36.0,33.3,19.2,3.9,5.4,4.4,0.147,2025
+2,Seattle Storm,Dominique Malonga,,1,42.0,14.3,7.7,4.6,0.9,1.9,0.126,2025
+3,Washington Mystics,Sonia Citron,Notre Dame,1,44.0,32.2,14.9,4.0,2.4,4.2,0.119,2025
+4,Washington Mystics,Kiki Iriafen,USC,1,44.0,26.9,13.3,8.5,1.6,3.0,0.102,2025
+7,Connecticut Sun,Aneesah Morrow,LSU,1,41.0,18.9,7.7,6.9,0.5,0.7,0.034,2025
+8,Connecticut Sun,Saniya Rivers,NC State,1,42.0,26.1,8.8,2.8,2.7,0.7,0.026,2025
+9,Los Angeles Sparks,Sarah Ashlee Barker,Alabama,1,34.0,14.1,3.1,1.9,0.9,-0.8,-0.064,2025
+11,Chicago Sky,Hailey Van Lith,TCU,1,29.0,12.4,3.5,1.1,1.6,-0.9,-0.102,2025
+12,Dallas Wings,Aziaha James,NC State,1,38.0,17.7,7.5,2.9,1.6,0.1,0.003,2025
+13,Las Vegas Aces,Aaliyah Nye,Alabama,1,44.0,15.3,3.8,1.5,0.5,0.0,0.002,2025
+14,Dallas Wings,Madison Scott,Ole Miss,1,9.0,5.2,1.6,0.1,0.2,0.1,0.086,2025
+15,Minnesota Lynx,Anastasiia Kosu,,1,21.0,3.8,1.7,0.7,0.2,0.1,0.068,2025
