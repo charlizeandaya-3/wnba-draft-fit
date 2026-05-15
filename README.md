@@ -83,7 +83,7 @@ With three first-round picks, Washington's haul was uneven — Lauren Betts proj
 
 ## Project Structure
 
-\```
+```
 wnba-draft-fit/
 ├── data/
 │   ├── external/        # Raw CSVs from Sports/Basketball Reference
@@ -101,7 +101,7 @@ wnba-draft-fit/
 │   └── model.py
 ├── app.py               # Streamlit dashboard
 └── README.md
-\```
+```
 
 ## Tools
 Python, pandas, scikit-learn, matplotlib, seaborn, plotly, Streamlit, Jupyter, GitHub
