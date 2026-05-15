@@ -82,6 +82,8 @@ With three first-round picks, Washington's haul was uneven — Lauren Betts proj
 - Taina Mair was waived before playing; Cotie McMahon suffered a season-ending UCL tear — both illustrate that roster decisions and injuries cannot be predicted from college stats alone
 
 ## Project Structure
+
+\```
 wnba-draft-fit/
 ├── data/
 │   ├── external/        # Raw CSVs from Sports/Basketball Reference
@@ -99,6 +101,7 @@ wnba-draft-fit/
 │   └── model.py
 ├── app.py               # Streamlit dashboard
 └── README.md
+\```
 
 ## Tools
 Python, pandas, scikit-learn, matplotlib, seaborn, plotly, Streamlit, Jupyter, GitHub
