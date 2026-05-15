@@ -1,12 +1,13 @@
 # WNBA Draft Fit Predictor
 🔗 **[Live Dashboard](https://wnba-draft-fit-2026.streamlit.app/)**
+
 Predicting which 2026 WNBA Round 1 draft picks will have the most rookie impact — and whether teams made the right call.
 
 ## The Question
 Did WNBA teams pick the right players in the 2026 draft? This project builds a data-driven model to predict rookie impact based on NCAA career performance and team context, then validates predictions against real 2026 season data as it unfolds.
 
 ## Key Finding
-Lauren Betts (pick #4, Washington Mystics) projects as the highest-impact rookie of the 2026 class. Azzi Fudd, despite going #1 overall to Dallas, projects below her draft position based on her college statistical profile relative to team fit.
+Lauren Betts (pick #4, Washington Mystics) projects as the highest-impact rookie of the 2026 class. Azzi Fudd, despite going #1 overall to Dallas, projects below her draft position based on her college statistical profile relative to team fit. Madina Okot is the most undervalued pick in the class — selected 13th by Atlanta, she projects as the second-highest impact rookie.
 
 ## Methodology
 
@@ -20,7 +21,7 @@ A composite metric built from 2019–2025 Round 1 rookie seasons:
 - Win Shares per 40 minutes (15%) — overall efficiency
 
 ### Model
-Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using weighted NCAA career averages and draft position. Validated with 5-fold cross validation (R² = 0.172).
+Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using weighted NCAA career averages and draft position. Validated with 5-fold cross validation (R² = 0.172) and leave-one-out cross validation (R² = 0.418). True model performance likely falls between these estimates.
 
 ### Features
 - Weighted NCAA career averages (scoring, rebounding, assists, efficiency, shooting)
@@ -48,19 +49,12 @@ Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using we
 | Angela Dugalic | Washington Mystics | 9 | 0.300 |
 | Cotie McMahon | Washington Mystics | 11 | 0.288 |
 
-## Visualizations
-
-### Predicted Rookie Impact Scores
-![Predicted RIS](visuals/predicted_ris_bar.png)
-
-### Draft Position vs Predicted Impact
-![Draft Position vs RIS](visuals/draft_position_vs_ris.png)
-
-### What NCAA Stats Best Predict WNBA Rookie Success?
-![Feature Importance](visuals/feature_importance.png)
-
-### Historical RIS Distribution vs 2026 Predictions
-![RIS Distribution](visuals/ris_distribution.png)
+## Dashboard
+The live Streamlit dashboard includes:
+- **Interactive predicted RIS bar chart** — color-coded by WNBA team, with hover showing team, pick, and predicted score
+- **Interactive draft position vs impact chart** — shows which players are above/below expected value for their pick slot
+- **Historical accuracy section** — backtest on 2023–2025 classes (R² = 0.276), with injury-affected players flagged and results broken out by class year
+- **2026 Season Tracker** — player explorer with live stats and predicted vs actual RIS comparison, plus a rookie leaderboard updated throughout the season
 
 ## Key Insights
 
@@ -68,20 +62,26 @@ Ridge Regression trained on 86 historical Round 1 rookies (2019–2025) using we
 College points per game and draft pick number are nearly equally predictive of WNBA rookie impact, suggesting scouts are doing their job but raw scoring still adds signal on top of draft position alone.
 
 **Games played in college matters more than shooting efficiency.**
-Availability and durability (games played) ranks third in feature importance — players who stayed healthy and played consistently in college tend to translate better to the pros. Three-point percentage and turnovers are nearly irrelevant predictors.
+Availability and durability ranks third in feature importance — players who stayed healthy and played consistently in college tend to translate better to the pros. Three-point percentage and turnovers are nearly irrelevant predictors.
 
 **Madina Okot is the most undervalued pick in the 2026 draft.**
-Selected 13th overall by Atlanta, her dominant rebounding profile (10.3 RPG in college) projects her as the second-highest impact rookie in the class — suggesting Atlanta got exceptional value late in the first round.
+Selected 13th overall by Atlanta, her dominant rebounding profile (10.3 RPG in college) projects her as the second-highest impact rookie in the class.
 
 **Azzi Fudd may be the most overvalued pick.**
-Despite going #1 overall to Dallas, her predicted RIS ranks 7th in the class. Her injury-shortened junior year likely suppresses her weighted career averages, so this may underestimate her true ceiling — but based purely on college production relative to draft position, she projects below expectations.
+Despite going #1 overall to Dallas, her predicted RIS ranks 7th in the class. Her injury-shortened junior year likely suppresses her weighted career averages — this may underestimate her true ceiling, but based purely on college production relative to draft position, she projects below expectations.
 
 **Washington Mystics had a split draft.**
-With three first-round picks, Washington's haul was uneven — Lauren Betts projects as the top rookie in the entire class, but Angela Dugalic and Cotie McMahon both project near the bottom.
+With three first-round picks, Washington's haul was uneven — Lauren Betts projects as the top rookie in the entire class, but Angela Dugalic and Cotie McMahon both project near the bottom. McMahon suffered a season-ending UCL tear before playing a game.
+
+## Model Limitations
+- Small training set (86 players) limits model power
+- Only NCAA players included — international prospects excluded due to lack of comparable college stats
+- Only Round 1 picks analyzed
+- Injury history not modeled — players with significant missed time are systematically undervalued
+- Toronto Tempo team context approximated using 2025 league average (expansion team)
+- Taina Mair was waived before playing; Cotie McMahon suffered a season-ending UCL tear — both illustrate that roster decisions and injuries cannot be predicted from college stats alone
 
 ## Project Structure
-
-```
 wnba-draft-fit/
 ├── data/
 │   ├── external/        # Raw CSVs from Sports/Basketball Reference
@@ -92,23 +92,16 @@ wnba-draft-fit/
 │   ├── 03_feature_engineering.ipynb
 │   ├── 04_modeling.ipynb
 │   └── 05_validation.ipynb
+├── visuals/             # Generated chart images
 ├── src/
 │   ├── scraper.py
 │   ├── features.py
 │   └── model.py
+├── app.py               # Streamlit dashboard
 └── README.md
-```
 
 ## Tools
-Python, pandas, scikit-learn, matplotlib, seaborn, Jupyter, GitHub
-
-## Limitations
-- Small training set (86 players) limits model power
-- Only NCAA players included — international prospects (Awa Fam, Nell Angloma, etc.) excluded due to lack of comparable college stats
-- Only Round 1 picks analyzed — model focuses on high-stakes picks where team fit matters most
-- Players with significant injury history may be undervalued — for example, Azzi Fudd missed most of her junior year with a knee injury, so her weighted career averages don't fully reflect her ceiling
-- Toronto Tempo team context approximated using 2025 league average (first-year expansion team with no prior stats)
-- Early season validation data is limited — predictions will be updated throughout the 2026 season
+Python, pandas, scikit-learn, matplotlib, seaborn, plotly, Streamlit, Jupyter, GitHub
 
 ## Status
-In Progress — 2026 season underway, validation ongoing
+🟡 In Progress — 2026 season underway, validation ongoing, dashboard live

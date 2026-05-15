@@ -109,9 +109,45 @@ Without draft pick, the model R² was only 0.012 — essentially random. Adding 
 
 ## Step 5: Validation
 
+### Historical Backtest
+The model was backtested on 2023–2025 draft classes (34 players) after being trained on 2019–2022 classes. Backtest metrics:
+
+| Metric | Value |
+|--------|-------|
+| R² | 0.276 |
+| RMSE | 0.154 |
+| Players Tested | 34 |
+
+**Injury-affected seasons** are flagged in the dashboard and excluded from the "Biggest Misses" ranking, as a low actual RIS caused by injury is not a model failure. Affected players:
+- **Nika Mühl (2024)** — missed the season with an ACL tear
+- **Cotie McMahon (2026)** — suffered a season-ending UCL tear before playing a game
+
+### 2026 Live Validation
 Predictions are validated against real 2026 WNBA season data as it unfolds. The validation notebook pulls current per-game statistics and compares them against predicted RIS scores. Updates are planned every 2 weeks throughout the 2026 season.
 
 Early validation snapshots are available in `data/processed/validation_snapshot.csv`.
+
+---
+
+## Step 6: Dashboard
+
+The live dashboard was built with Streamlit and deployed at [wnba-draft-fit-2026.streamlit.app](https://wnba-draft-fit-2026.streamlit.app/).
+
+### Interactive Charts
+Static matplotlib visualizations were converted to interactive Plotly charts for two key tabs:
+- **Predicted RIS bar chart** — color-coded by WNBA team, hover shows team, pick number, and predicted score
+- **Draft Position vs Impact scatter** — hover shows player name, team, pick, and predicted RIS
+- **Historical Accuracy scatter** — hover shows player name, actual vs predicted RIS, pick number, and error; color-coded by class year
+
+### Historical Accuracy Section
+The Historical Accuracy tab is structured as:
+1. Interactive scatter plot (predicted vs actual RIS, color-coded by class year)
+2. Backtest metrics (R², RMSE, players tested)
+3. Biggest Hits & Misses spotlight — injury-affected players excluded from misses with an expandable note explaining why
+4. Results by class year — tabbed breakdown for 2023, 2024, and 2025 with injury flags inline
+
+### 2026 Season Tracker
+The bottom section of the dashboard groups the Player Explorer and Rookie Leaderboard under a shared "2026 Season Tracker" header, making clear that both tools are live validation features updated throughout the season.
 
 ---
 
@@ -131,40 +167,43 @@ Early validation snapshots are available in `data/processed/validation_snapshot.
 ## Roadmap
 
 ### Completed
-- Leave-one-out cross validation added to modeling notebook for more robust performance estimation on small datasets
+- Ridge Regression model trained on 86 historical rookies (2019–2022)
+- Leave-one-out cross validation for more robust performance estimation
+- Historical backtest on 2023–2025 classes (R² = 0.276)
+- Interactive Streamlit dashboard deployed at [wnba-draft-fit-2026.streamlit.app](https://wnba-draft-fit-2026.streamlit.app/)
+- Interactive Plotly charts replacing static images for key visualizations
+- Injury-aware historical accuracy section with class year tabs
+- 2026 Season Tracker with live player explorer and rookie leaderboard
 
 ### Currently In Progress
-- **Interactive Streamlit dashboard** — converting static visualizations into an interactive tool where users can explore predictions by team, player, or position
+- Midseason validation updates every 2 weeks throughout the 2026 season
 
 ### Planned
-- Midseason validation updates every 2 weeks throughout the 2026 season
 - Historical comp finder — identifying the most statistically similar historical rookie for each 2026 prospect
-- Backtest on 2024 and 2025 draft classes to quantify historical accuracy
 
 ### Future Improvements
 
 #### Modeling
-- **Learn RIS weights from data** — use optimization or regression to find weights that best predict long-term WNBA success instead of assigning them manually
-- **Add player position as a feature** — centers, forwards, and guards translate differently from college to the WNBA; position-specific models could improve accuracy
-- **Conference strength adjustment** — normalize college stats by strength of schedule so cross-school comparisons are more meaningful
-- **Expand training data to rounds 2 and 3** — would roughly triple the training set and improve model reliability
-- **Build a Bayesian model** — use draft position as a prior probability of success, then update with statistical evidence from college performance
-- **Add college-to-WNBA translation factors by position** — similar to baseball's minor league translation factors
-- **Try ensemble methods** — combine predictions from multiple models into a weighted ensemble
+- **Learn RIS weights from data** — use optimization or regression to find weights that best predict long-term WNBA success
+- **Add player position as a feature** — position-specific models could improve accuracy
+- **Conference strength adjustment** — normalize college stats by strength of schedule
+- **Expand training data to rounds 2 and 3** — would roughly triple the training set
+- **Build a Bayesian model** — use draft position as a prior, update with statistical evidence
+- **Try ensemble methods** — combine predictions from multiple models
 
 #### Data
 - **Include international players** — build a separate model using EuroLeague or FIBA stats with a translation layer
-- **Add injury history** — players who missed significant college time are systematically undervalued by the current model
-- **Add physical measurables** — height, wingspan, and athleticism from pre-draft workouts
-- **Track team roster turnover** — a rookie entering a depleted roster has more opportunity than one joining a championship team
-- **Add coaching history** — certain coaches are known for developing young players, which affects rookie opportunity
+- **Add injury history** — flag players who missed significant college time
+- **Add physical measurables** — height, wingspan, athleticism from pre-draft workouts
+- **Track team roster turnover** — opportunity matters as much as fit
+- **Add coaching history** — certain coaches are known for developing young players
 
 #### Validation & Monitoring
-- **Automated validation pipeline** — pull updated stats automatically without manual CSV downloading
-- **Confidence intervals** — produce ranges of likely outcomes instead of single-point predictions
+- **Automated validation pipeline** — pull updated stats automatically
+- **Confidence intervals** — produce ranges of likely outcomes instead of point predictions
 - **Track prediction drift** — monitor how predictions change as more season data accumulates
 
 #### Visualization
-- **Radar/spider charts** — show each prospect's full statistical profile visually
+- **Radar/spider charts** — show each prospect's full statistical profile
 - **Side-by-side player comparisons** — given any two prospects, show how their profiles compare
 - **Historical comp finder** — for each 2026 prospect, identify the most statistically similar historical rookie
