@@ -132,8 +132,8 @@ with st.expander("ℹ️ How to read this dashboard"):
     A positive delta (green) means the player is currently outperforming their predicted RIS. A negative delta (red) means they're underperforming. Note: with only 2–3 games played, these are very early signals.
     
     **Why are some players missing stats?**
-    
-    Cotie McMahon suffered a season-ending UCL tear. Taina Mair was waived before playing. These outcomes highlight a key model limitation — injury and roster decisions cannot be predicted from college stats alone.
+                
+    Cotie McMahon missed the start of the season with a partial UCL tear but has since returned. Taina Mair was waived before the season but signed a developmental contract.
     
     **Why are international players not included?**
     
@@ -304,8 +304,9 @@ with tab5:
     backtest = pd.read_csv("data/processed/backtest_results.csv")
 
     injury_exclusions = {
-        "Nika Mühl": "Missed 2024 season with ACL tear",
-        "Cotie McMahon": "Missed 2026 season with UCL tear",
+    "Nika Mühl": "Missed 2024 season with ACL tear",
+    "Georgia Amoore": "Missed 2025 rookie season with ACL tear",
+    "Cotie McMahon": "Missed start of 2026 season with partial UCL tear — has since returned",
     }
 
     colors = {2023: '#418FDE', 2024: '#C8102E', 2025: '#2C5234'}
@@ -438,8 +439,8 @@ st.caption(f"📅 Data last updated: {snapshot_date} · Refreshes automatically 
 st.subheader("Player Explorer")
 
 player_status = {
-    "Cotie McMahon": "⚠️ Out for season — UCL tear",
-    "Taina Mair": "⚠️ Waived before playing a game",
+    "Cotie McMahon": "⚠️ Missed start of season with partial UCL tear — now playing",
+    "Taina Mair": "⚠️ Waived before season — signed developmental contract",
 }
 
 selected_player = st.selectbox("Select a player", predictions['player'].sort_values())
@@ -504,7 +505,7 @@ if not player_val.empty and not pd.isna(player_val['actual_RIS'].values[0]):
     ax.spines['bottom'].set_color('white')
 
     st.pyplot(fig)
-    st.caption("⚠️ Early season — actual RIS based on 2-3 games only. Will stabilize over time.")
+
 
 st.markdown("---")
 
@@ -515,7 +516,7 @@ st.caption(f"Among rookies with available stats — last updated: {snapshot_date
 
 leaderboard = validation[validation['G'].notna() &
                           validation['ppg'].notna()].copy()
-leaderboard = leaderboard[~leaderboard['player'].isin(['Cotie McMahon', 'Taina Mair'])]
+leaderboard = leaderboard[~leaderboard['player'].isin(['Taina Mair'])]
 
 col1, col2 = st.columns(2)
 
