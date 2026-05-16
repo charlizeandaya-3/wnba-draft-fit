@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 st.set_page_config(
     page_title="WNBA Draft Fit Predictor",
     page_icon="🏀",
-    layout="wide"
+    layout="centered"
 )
 
 # Global font size
@@ -205,8 +205,8 @@ with tab2:
             title='Draft Pick Number',
             title_font=dict(size=16),
             tickfont=dict(size=14),
-            dtick=1,
-        ),
+            dtick=2,  # every other pick number instead of every one
+    ),
         yaxis=dict(
             title='Predicted Rookie Impact Score (RIS)',
             title_font=dict(size=16),
