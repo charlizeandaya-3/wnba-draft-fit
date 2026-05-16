@@ -14,11 +14,83 @@ st.set_page_config(
     layout="wide"
 )
 
-# Global font size
 st.markdown("""
     <style>
+    /* Global font */
     html, body, [class*="css"] {
         font-size: 16px;
+    }
+
+    /* Header banner */
+    .main-header {
+        background: linear-gradient(135deg, #FF6B00 0%, #C8102E 100%);
+        padding: 2rem 2rem 1.5rem 2rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+    }
+    .main-header h1 {
+        color: white;
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin: 0;
+        letter-spacing: -1px;
+    }
+    .main-header p {
+        color: rgba(255,255,255,0.85);
+        font-size: 1.1rem;
+        margin: 0.5rem 0 0 0;
+    }
+
+    /* Metric cards */
+    [data-testid="metric-container"] {
+        background-color: #1A1D24;
+        border: 1px solid #FF6B00;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    [data-testid="metric-container"] label {
+        color: #FF6B00 !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    /* Tab styling */
+    .stTabs [data-baseweb="tab"] {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #AAAAAA;
+    }
+    .stTabs [aria-selected="true"] {
+        color: #FF6B00 !important;
+        border-bottom-color: #FF6B00 !important;
+    }
+
+    /* Section headers */
+    h2, h3 {
+        color: #FF6B00;
+    }
+
+    /* Divider */
+    hr {
+        border-color: #FF6B00;
+        opacity: 0.3;
+    }
+
+    /* Dataframe */
+    [data-testid="stDataFrame"] {
+        border: 1px solid #FF6B00;
+        border-radius: 8px;
+    }
+
+    /* Selectbox */
+    [data-testid="stSelectbox"] label {
+        color: #FF6B00;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -34,9 +106,12 @@ def load_data():
 predictions, rookies, validation = load_data()
 
 # Title
-st.title("🏀 WNBA Draft Fit Predictor")
-st.subheader("2026 Draft Class — Predicted Rookie Impact by Team Fit & NCAA Career Profile")
-st.markdown("---")
+st.markdown("""
+    <div class="main-header">
+        <h1>🏀 WNBA Draft Fit Predictor</h1>
+        <p>2026 Draft Class — Predicted Rookie Impact by Team Fit & NCAA Career Profile</p>
+    </div>
+""", unsafe_allow_html=True)
 
 with st.expander("ℹ️ How to read this dashboard"):
     st.markdown("""
