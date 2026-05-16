@@ -1,0 +1,32 @@
+name: Update 2026 Validation Stats
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'  # Every Monday at 10am UTC
+  workflow_dispatch:       # Lets you trigger manually from GitHub
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy requests lxml beautifulsoup4
+
+      - name: Run update script
+        run: python src/scraper.py
+
+      - name: Commit updated CSVs
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add data/external/wnba_2026_current_stats.csv
+          git add data/external/wnba_2026_advanced_stats.csv
+          git add data/processed/validation_snapshot.csv
+          git commit -m "auto: update 2026 validation stats $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push

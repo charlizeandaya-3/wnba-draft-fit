@@ -1,13 +1,13 @@
-player,wnba_team,draft_pick,predicted_RIS,G,mpg,ppg,rpg,apg,snapshot_date,games_into_season,actual_RIS
-Angela Dugalic,Washington Mystics,9,0.3,2.0,11.5,3.5,2.0,0.0,2026-05-15,2,0.091
-Azzi Fudd,Dallas Wings,1,0.414,2.0,18.5,5.5,1.0,0.0,2026-05-15,2,0.176
-Cotie McMahon,Washington Mystics,11,0.288,,,,,,2026-05-15,0,
-Flau'jae Johnson,Seattle Storm,8,0.486,3.0,28.0,11.7,4.7,1.7,2026-05-15,3,0.527
-Gabriela Jaquez,Chicago Sky,5,0.481,2.0,29.0,8.5,6.0,2.0,2026-05-15,2,0.404
-Gianna Kneepkens,Connecticut Sun,15,0.301,3.0,12.3,4.3,3.0,0.7,2026-05-15,3,0.25
-Kiki Rice,Toronto Tempo,6,0.496,2.0,19.0,6.0,2.5,1.0,2026-05-15,2,0.19
-Lauren Betts,Washington Mystics,4,0.595,2.0,15.0,3.5,3.5,1.0,2026-05-15,2,0.151
-Madina Okot,Atlanta Dream,13,0.521,2.0,9.5,4.0,4.5,0.0,2026-05-15,2,0.931
-Olivia Miles,Minnesota Lynx,2,0.476,3.0,30.3,16.3,3.7,7.0,2026-05-15,3,0.044
-Raven Johnson,Indiana Fever,10,0.333,2.0,8.5,2.0,1.5,2.0,2026-05-15,2,
-Taina Mair,Seattle Storm,14,0.326,,,,,,2026-05-15,0,
+player,wnba_team,draft_pick,predicted_RIS,G,mpg,ppg,rpg,apg,WS/40,actual_RIS,snapshot_date,games_into_season
+Angela Dugalic,Washington Mystics,9,0.3,2.0,11.5,3.5,2.0,0.0,-0.009,0.0885019567588375,2026-05-15,2
+Azzi Fudd,Dallas Wings,1,0.414,2.0,18.5,5.5,1.0,0.0,0.0,0.15688682876756274,2026-05-15,2
+Cotie McMahon,Washington Mystics,11,0.288,,,,,,,,2026-05-15,0
+Flau'jae Johnson,Seattle Storm,8,0.486,3.0,28.0,11.7,4.7,1.7,0.032,0.49306014169316914,2026-05-15,3
+Gabriela Jaquez,Chicago Sky,5,0.481,2.0,29.0,8.5,6.0,2.0,0.188,0.6031043726915287,2026-05-15,2
+Gianna Kneepkens,Connecticut Sun,15,0.301,3.0,12.3,4.3,3.0,0.7,0.046,0.18987425418618079,2026-05-15,3
+Kiki Rice,Toronto Tempo,6,0.496,2.0,19.0,6.0,2.5,1.0,0.16,0.3378444491288528,2026-05-15,2
+Lauren Betts,Washington Mystics,4,0.595,2.0,15.0,3.5,3.5,1.0,0.034,0.2094849187509738,2026-05-15,2
+Madina Okot,Atlanta Dream,13,0.521,2.0,9.5,4.0,4.5,0.0,0.097,0.22508211971514722,2026-05-15,2
+Olivia Miles,Minnesota Lynx,2,0.476,3.0,30.3,16.3,3.7,7.0,0.179,0.7253577981651377,2026-05-15,3
+Raven Johnson,Indiana Fever,10,0.333,2.0,8.5,2.0,1.5,2.0,0.209,0.20357142857142857,2026-05-15,2
+Taina Mair,Seattle Storm,14,0.326,,,,,,,,2026-05-15,0
