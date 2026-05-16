@@ -66,7 +66,16 @@ with st.expander("ℹ️ How to read this dashboard"):
     
     **Why only Round 1 picks?**
     
-    Round 1 picks represent the highest-stakes decisions — the largest contracts, the most pressure, and the most scrutiny. They also have the most reliable data and the lowest rate of never playing at all. Round 2 and 3 picks are more likely to get waived before playing, which introduces noise into the model.""")
+    Round 1 picks represent the highest-stakes decisions — the largest contracts, the most pressure, and the most scrutiny. They also have the most reliable data and the lowest rate of never playing at all. Round 2 and 3 picks are more likely to get waived before playing, which introduces noise into the model.
+
+    **How was historical accuracy measured?**
+    
+    The model was backtested on 2023–2025 draft classes (34 players) after being trained on 2019–2022 classes. The Historical Accuracy tab shows predicted vs actual RIS for each player, broken out by class year. Hover over any dot to see the player name, pick number, and error.
+    
+    **Why are some players excluded from the Biggest Misses list?**
+    
+    Players whose low actual RIS is explained by injury are excluded from the misses ranking — a player who missed the season with an ACL tear is not a model failure. Nika Mühl (2024, ACL tear) is flagged and excluded. These players are still visible in the class year tabs with an injury note.
+    """)
 
 # Key metrics
 col1, col2, col3, col4 = st.columns(4)
