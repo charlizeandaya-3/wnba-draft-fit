@@ -71,7 +71,7 @@ Selected 13th overall by Atlanta, her dominant rebounding profile (10.3 RPG in c
 Despite going #1 overall to Dallas, her predicted RIS ranks 7th in the class. Her injury-shortened junior year likely suppresses her weighted career averages — this may underestimate her true ceiling, but based purely on college production relative to draft position, she projects below expectations.
 
 **Washington Mystics had a split draft.**
-With three first-round picks, Washington's haul was uneven — Lauren Betts projects as the top rookie in the entire class, but Angela Dugalic and Cotie McMahon both project near the bottom. McMahon suffered a season-ending UCL tear before playing a game.
+With three first-round picks, Washington's haul was uneven — Lauren Betts projects as the top rookie in the entire class, but Angela Dugalic and Cotie McMahon both project near the bottom. McMahon had a partial UCL tear before playing a game, but returned for her first game on May 15th..
 
 ## Model Limitations
 - Small training set (86 players) limits model power
@@ -79,7 +79,7 @@ With three first-round picks, Washington's haul was uneven — Lauren Betts proj
 - Only Round 1 picks analyzed
 - Injury history not modeled — players with significant missed time are systematically undervalued
 - Toronto Tempo team context approximated using 2025 league average (expansion team)
-- Taina Mair was waived before playing; Cotie McMahon suffered a season-ending UCL tear — both illustrate that roster decisions and injuries cannot be predicted from college stats alone
+- Taina Mair was waived before playing, but was signed as development player soon after; Cotie McMahon had a partial UCL tear — both illustrate that roster decisions and injuries cannot be predicted from college stats alone.
 
 ## Project Structure
 
