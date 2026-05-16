@@ -356,6 +356,8 @@ st.markdown("---")
 # 2026 Season Tracker
 st.header("2026 Season Tracker")
 st.caption("Live validation — tracking how 2026 predictions hold up as the season unfolds.")
+snapshot_date = validation['snapshot_date'].iloc[0] if 'snapshot_date' in validation.columns else "Unknown"
+st.caption(f"📅 Data last updated: {snapshot_date} · Refreshes automatically every Monday")
 
 # Player Explorer
 st.subheader("Player Explorer")
@@ -433,7 +435,8 @@ st.markdown("---")
 
 # Rookie Leaderboard
 st.subheader("Rookie Leaderboard")
-st.caption("Among rookies with available stats — updated May 15, 2026")
+snapshot_date = validation['snapshot_date'].iloc[0] if 'snapshot_date' in validation.columns else "Unknown"
+st.caption(f"Among rookies with available stats — last updated: {snapshot_date} · Updates every Monday")
 
 leaderboard = validation[validation['G'].notna() &
                           validation['ppg'].notna()].copy()

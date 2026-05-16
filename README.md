@@ -108,3 +108,6 @@ Python, pandas, scikit-learn, matplotlib, seaborn, plotly, Streamlit, Jupyter, G
 
 ## Status
 🟡 In Progress — 2026 season underway, validation ongoing, dashboard live
+
+## Automated Updates
+Validation data updates automatically every Monday via GitHub Actions. The scraper pulls current WNBA per-game and advanced stats from Basketball Reference, recomputes actual RIS for all 2026 rookies, and commits the updated CSVs to the repo. The Streamlit dashboard reflects the latest data on next page load.

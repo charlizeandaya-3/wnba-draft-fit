@@ -174,9 +174,7 @@ The bottom section of the dashboard groups the Player Explorer and Rookie Leader
 - Interactive Plotly charts replacing static images for key visualizations
 - Injury-aware historical accuracy section with class year tabs
 - 2026 Season Tracker with live player explorer and rookie leaderboard
-
-### Currently In Progress
-- Midseason validation updates every 2 weeks throughout the 2026 season
+- **Automated validation pipeline** — GitHub Actions workflow scrapes Basketball Reference every Monday, recomputes actual RIS, and commits updated CSVs; dashboard reflects new data automatically
 
 ### Planned
 - Historical comp finder — identifying the most statistically similar historical rookie for each 2026 prospect
@@ -199,7 +197,7 @@ The bottom section of the dashboard groups the Player Explorer and Rookie Leader
 - **Add coaching history** — certain coaches are known for developing young players
 
 #### Validation & Monitoring
-- **Automated validation pipeline** — pull updated stats automatically
+- **Automated validation pipeline** — ✅ Completed. GitHub Actions scrapes per-game and advanced stats from Basketball Reference every Monday and updates validation_snapshot.csv automatically.
 - **Confidence intervals** — produce ranges of likely outcomes instead of point predictions
 - **Track prediction drift** — monitor how predictions change as more season data accumulates
 
