@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 st.set_page_config(
     page_title="WNBA Draft Fit Predictor",
     page_icon="🏀",
-    layout="centered"
+    layout="wide"
 )
 
 # Global font size
